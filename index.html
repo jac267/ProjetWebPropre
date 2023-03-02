@@ -3,7 +3,27 @@
   <head>
     <link rel="stylesheet" href="style/main.css" />
     <link rel="stylesheet" href="style/normalizebutton.css" />
+    <link rel="stylesheet" href="style/normalizescrollbar.css" />
+
+    <link rel="stylesheet" href="style/listeemail.css" />
+    <link rel="stylesheet" href="style/carnetadresse.css" />
+    <link rel="stylesheet" href="style/composer.css" />
+
+    <script src="script/pageInterchangable.js" defer></script>
+    <script src="script/listeEmail.js" defer></script>
+    <script src="script/carnetAdresse.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/42739acc52.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script/animatedBackground.js"></script>
+    <div id="vanta"></div>
   </head>
+
   <body>
     <!-- Pop up pour ajouter des contacts dans le carnet d'adresse-->
     <div class="popup-modifier-carnet"></div>
@@ -20,21 +40,98 @@
     </div>
 
     <!-- La liste de tous les couriels recus -->
-    <div class="list-couriel" id="liste-couriel"></div>
+    <div class="list-couriel" id="liste-couriel">
+      <div class="search-wrapper">
+        <input type="search" id="liste-couriel-search" data-search />
+      </div>
+      <div class="user-cards" data-user-cards-container></div>
+
+      <template data-user-template>
+        <div class="card" onclick="temp()">
+          <div class="header" data-header></div>
+          <div class="body" data-body></div>
+        </div>
+      </template>
+    </div>
 
     <!-- l'interface du carnet d'adresse -->
-    <div
-      class="carnet-adresse interface-interchangable"
-      id="carnet-adresse"
-    ></div>
+    <div class="ui-interchangable" id="carnet-adresse" style="display: none">
+      <div class="carnet-adresse-title">Carnet d'addresse</div>
+      <!-- *** AJOUTER LE AUTO COMPLETE ***-->
+      <div class="carnet-adresse-search-bar">
+        <input type="text" placeholder="Search.." />
+      </div>
+      <div class="carnet-adresse-list">
+        <!-- *** ECRIRE UN ON LOAD FUNCTION POUR QUE SA AILLE LIRE TOUTE LES CONTACT DU LOCAL STORAGE ***-->
+        <ul>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+          <li onclick="updateList(this)">bob</li>
+        </ul>
+      </div>
+      <div class="carnet-adresse-ajouter-adresse">
+        <button class="normalize-button">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <div class="carnet-adresse-modifier-adresse">
+        <button type="button" class="normalize-button">
+          <i class="fa fa-pencil"></i>
+        </button>
+      </div>
+      <div class="carnet-adresse-supprimer-adresse">
+        <button type="button" class="normalize-button">
+          <i class="fas fa-minus"></i>
+        </button>
+      </div>
+    </div>
 
     <!-- l'interface pour composer un couriel -->
-    <div
-      class="composer-couriel interface-interchangable"
-      id="composer-couriel"
-    ></div>
+    <div class="ui-interchangable" id="composer-couriel" style="display: none">
+      <div class="composer-title">
+        <input type="text" placeholder="Titre" name="titrebox" id="title-id" />
+      </div>
+      <div class="composer-destinataire">
+        <input
+          type="text"
+          placeholder="Destinataire"
+          name="destinatairebox"
+          id="destinataire-id"
+        />
+      </div>
+      <div class="composer-content">
+        <textarea type="textarea" name="contentbox" id="content-id"></textarea>
+        <div class="composer-envoyer">
+          <button class="normalize-button" onclick="send()">Envoyez</button>
+        </div>
+      </div>
+    </div>
 
     <!-- l'interface pour lire un couriel -->
-    <div class="lire-couriel interface-interchangable" id="lire-couriel"></div>
+    <div
+      class="ui-interchangable"
+      id="lire-couriel"
+      style="display: none"
+    ></div>
   </body>
 </html>

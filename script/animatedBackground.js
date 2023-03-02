@@ -1,5 +1,4 @@
 // code trouver sur : https://www.vantajs.com/
-
 window.addEventListener("DOMContentLoaded", () => {
   VANTA.FOG({
     el: "#vanta",
