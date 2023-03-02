@@ -18,14 +18,14 @@
   grid-row-end: 1;
 }
 
-.carnet-adresse-search-bar {
+#carnet-adresse-search-bar {
   grid-column-start: 2;
   grid-column-end: 10;
   grid-row-start: 2;
   grid-row-end: 2;
 }
 
-.carnet-adresse-search-bar input[type="text"] {
+#carnet-adresse-search-bar input[type="text"] {
   width: 100%;
 
   font-size: 17px;

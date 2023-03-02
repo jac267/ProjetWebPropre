@@ -70,12 +70,11 @@
     <!-- l'interface du carnet d'adresse -->
     <div class="ui-interchangable" id="carnet-adresse" style="display: none">
       <div class="carnet-adresse-title">Carnet d'addresse</div>
-      <!-- *** AJOUTER LE AUTO COMPLETE ***-->
-      <div class="carnet-adresse-search-bar">
-        <input type="text" placeholder="Search.." />
+      <div id="carnet-adresse-search-bar">
+        <input type="text" placeholder="Search.." oninput="refreshList()"/>
       </div>
       <div id="carnet-adresse-list" >
-        <!-- *** ECRIRE UN ON LOAD FUNCTION POUR QUE SA AILLE LIRE TOUTE LES CONTACT DU LOCAL STORAGE ***-->
+        
         <ul>
         </ul>
       </div>

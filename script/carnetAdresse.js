@@ -16,6 +16,8 @@ function updateList(selected) {
 
 function refreshList() {
   let carnetDAdresse = JSON.parse(localStorage.getItem("carnetDAdresse"));
+  let autoCompletContent = document.getElementById("carnet-adresse-search-bar")
+    .children[0].value;
 
   if (carnetDAdresse != null) {
     myElement = document.getElementById("carnet-adresse-list");
@@ -25,10 +27,12 @@ function refreshList() {
     for (let i = 0; i < carnetDAdresse.valeur.length; i++) {
       const node = document.createElement("li");
 
-      node.innerHTML = carnetDAdresse["valeur"][i].Name;
-      node.setAttribute("onclick", "updateList(this)");
-      node.setAttribute("ondblclick", "open_mod(" + i + ")");
-      myElement.appendChild(node);
+      if (carnetDAdresse["valeur"][i].Name.search(autoCompletContent) != -1) {
+        node.innerHTML = carnetDAdresse["valeur"][i].Name;
+        node.setAttribute("onclick", "updateList(this)");
+        node.setAttribute("ondblclick", "open_mod(" + i + ")");
+        myElement.appendChild(node);
+      }
     }
   }
 }
