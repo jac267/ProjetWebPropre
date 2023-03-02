@@ -7,6 +7,8 @@ body {
   gap: 2vh;
 
   background-color: none;
+
+  overflow: hidden;
 }
 
 body > div {

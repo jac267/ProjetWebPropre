@@ -5,10 +5,12 @@
     <link rel="stylesheet" href="style/normalizebutton.css" />
     <link rel="stylesheet" href="style/normalizescrollbar.css" />
 
+    <link rel="stylesheet" href="style/popup-modifier-carnet.css">
     <link rel="stylesheet" href="style/listeemail.css" />
     <link rel="stylesheet" href="style/carnetadresse.css" />
     <link rel="stylesheet" href="style/composer.css" />
 
+    <script src="script/popUpModifierCarnet.js" defer></script>
     <script src="script/pageInterchangable.js" defer></script>
     <script src="script/listeEmail.js" defer></script>
     <script src="script/carnetAdresse.js" defer></script>
@@ -24,9 +26,20 @@
     <div id="vanta"></div>
   </head>
 
-  <body>
+  <body onload="refreshList()">
     <!-- Pop up pour ajouter des contacts dans le carnet d'adresse-->
-    <div class="popup-modifier-carnet"></div>
+    <div id="wraper-popup-modifier-carnet">
+      <div class="popup-modifier-carnet">
+        <input type="text" id="contact-name-field" placeholder="Name"></input>
+        <button onclick="sauvegarder()" id="contact-conffirmer-button" class="normalize-button">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </button>
+        <button onclick="fermer();" id="contact-annulez-button" class="normalize-button">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <textarea type="textarea" id="contact-public-key-field" placeholder="public-key"></textarea>
+      </div>    
+    </div>
 
     <!-- La navigation bar (les boutons pour basculer de Composer aux carnet d'adresse)-->
     <div class="navigation-bar">
@@ -61,46 +74,23 @@
       <div class="carnet-adresse-search-bar">
         <input type="text" placeholder="Search.." />
       </div>
-      <div class="carnet-adresse-list">
+      <div id="carnet-adresse-list" >
         <!-- *** ECRIRE UN ON LOAD FUNCTION POUR QUE SA AILLE LIRE TOUTE LES CONTACT DU LOCAL STORAGE ***-->
         <ul>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
-          <li onclick="updateList(this)">bob</li>
         </ul>
       </div>
       <div class="carnet-adresse-ajouter-adresse">
-        <button class="normalize-button">
+        <button class="normalize-button" onclick="open_new()">
           <i class="fa-solid fa-plus"></i>
         </button>
       </div>
       <div class="carnet-adresse-modifier-adresse">
-        <button type="button" class="normalize-button">
+        <button type="button" class="normalize-button" onclick="triggerMod()">
           <i class="fa fa-pencil"></i>
         </button>
       </div>
       <div class="carnet-adresse-supprimer-adresse">
-        <button type="button" class="normalize-button">
+        <button type="button" class="normalize-button" onclick="remove()">
           <i class="fas fa-minus"></i>
         </button>
       </div>
