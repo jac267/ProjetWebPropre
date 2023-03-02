@@ -1,5 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> </head>
-  <body></body>
+  <head>
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/normalizebutton.css" />
+  </head>
+  <body>
+    <!-- Pop up pour ajouter des contacts dans le carnet d'adresse-->
+    <div class="popup-modifier-carnet"></div>
+
+    <!-- La navigation bar (les boutons pour basculer de Composer aux carnet d'adresse)-->
+    <div class="navigation-bar">
+      <button class="normalize-button" onclick="showCarnetAdresse()">
+        <span class="text">Carnet d'Adresse</span>
+      </button>
+
+      <button class="normalize-button" onclick="showComposer()">
+        <span class="text">Composer un courriel</span>
+      </button>
+    </div>
+
+    <!-- La liste de tous les couriels recus -->
+    <div class="list-couriel" id="liste-couriel"></div>
+
+    <!-- l'interface du carnet d'adresse -->
+    <div
+      class="carnet-adresse interface-interchangable"
+      id="carnet-adresse"
+    ></div>
+
+    <!-- l'interface pour composer un couriel -->
+    <div
+      class="composer-couriel interface-interchangable"
+      id="composer-couriel"
+    ></div>
+
+    <!-- l'interface pour lire un couriel -->
+    <div class="lire-couriel interface-interchangable" id="lire-couriel"></div>
+  </body>
 </html>

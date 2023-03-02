@@ -1,0 +1,58 @@
+body {
+  height: 98vh;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 2vh;
+
+  opacity: 0.6;
+  background-color: none;
+}
+
+body > div {
+  border-radius: 10px;
+}
+
+.navigation-bar {
+  height: 100%;
+  width: 100%;
+
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 0;
+  grid-row-end: 2;
+
+  background-color: black;
+}
+
+/* carnet-adresse, composer-couriel lire-couriel sont aux meme endroit sure la grille */
+/* car il sont interchangable */
+
+.interface-interchangable {
+  min-height: 100%;
+
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 11;
+
+  background-color: rgb(48, 49, 54);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+.list-couriel {
+  min-height: 100%;
+
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 11;
+
+  background-color: black;
+
+  box-sizing: border-box;
+}
