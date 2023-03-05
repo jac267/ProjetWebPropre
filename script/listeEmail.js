@@ -4,6 +4,7 @@ const searchInput = document.querySelector("[data-search]");
 
 let users = [];
 
+
 searchInput.addEventListener("input", (e) => {
   const value = e.target.value.toLowerCase();
   users.forEach((user) => {
@@ -14,7 +15,9 @@ searchInput.addEventListener("input", (e) => {
   });
 });
 
-fetch("https://jsonplaceholder.typicode.com/users")
+
+
+  fetch("https://jsonplaceholder.typicode.com/users")
   .then((res) => res.json())
   .then((data) => {
     users = data.map((user) => {
@@ -27,6 +30,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
       return { name: user.name, email: user.email, element: card };
     });
   });
+
 
 function addEmail() {
   var buttonList = document.getElementById("button-list");

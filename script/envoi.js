@@ -23,8 +23,6 @@ function send(){
         document.getElementById("content-id").value ="";
         alert("Message envoyé avec succès");
         
-
-        //let email = {titre:titre_txt, destinataire:receiver_txt, contenu:content_txt};
         let email ={};
         email.titre = titre_txt
         email.destinataire = receiver_txt
@@ -37,21 +35,34 @@ function send(){
         localStorage.setItem(value,emailstr)
         value++
         localStorage.nombre=value
-        //console.log(localStorage.getItem(1))
-       
-       
         let displaytest = JSON.parse(localStorage.getItem(1))
-        //let strtest = JSON.stringify(displaytest)
         console.log(displaytest)
         console.log(displaytest.titre)
     
-    
+        loadnew()
     }
 
 }
 
-function load(){
-    
+function loadnew(){
+    alert("loaded emails")
+ /*   
+    for(var i=0;i<localStorage.nombre;i++){
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res) => res.json())
+        .then((data) => {
+          users = data.map((user) => {
+            const card = userCardTemplate.content.cloneNode(true).children[0];
+            const header = card.querySelector("[data-header]");
+            const body = card.querySelector("[data-body]");
+            header.textContent = user.name;
+            body.textContent = user.email;
+            userCardContainer.append(card);
+            return { name: user.name, email: user.email, element: card };
+          });
+        });
+    }
+*/
 }
 
 

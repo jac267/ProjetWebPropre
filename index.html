@@ -27,7 +27,7 @@
     <div id="vanta"></div>
   </head>
 
-  <body onload="refreshList()">
+  <body onload="refreshList(); loademail()">
     <!-- Pop up pour ajouter des contacts dans le carnet d'adresse-->
     <div id="wraper-popup-modifier-carnet">
       <div class="popup-modifier-carnet">
@@ -54,7 +54,7 @@
     </div>
 
     <!-- La liste de tous les couriels recus -->
-    <div class="list-couriel" id="liste-couriel">
+    <div class="list-couriel" id="liste-couriel" >
       <div class="search-wrapper">
         <input type="search" id="liste-couriel-search" data-search />
       </div>
