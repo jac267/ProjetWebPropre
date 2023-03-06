@@ -16,7 +16,7 @@ searchInput.addEventListener("input", (e) => {
 });
 
 
-
+/*
   fetch("https://jsonplaceholder.typicode.com/users")
   .then((res) => res.json())
   .then((data) => {
@@ -29,7 +29,10 @@ searchInput.addEventListener("input", (e) => {
       userCardContainer.append(card);
       return { name: user.name, email: user.email, element: card };
     });
-  });
+  }); */
+
+loadinit();
+
 
 
 function addEmail() {
@@ -47,4 +50,39 @@ function addEmail() {
 }
 function temp() {
   alert("Va ouvrir le courriel");
+}
+
+function loadinit(){
+  const nombre = localStorage.nombre
+  console.log(nombre)
+  for (var i=0;i<nombre;i++){
+    emailcreate(i);
+  }
+}
+
+function emailcreate(number){
+  let emailload = JSON.parse(localStorage.getItem(number))
+    //console.log(number)
+    const card = userCardTemplate.content.cloneNode(true).children[0];
+    const header = card.querySelector("[data-header]");
+    const body = card.querySelector("[data-body]");
+    header.textContent = emailload.titre;
+    body.textContent = emailload.destinataire;
+    userCardContainer.append(card);
+    return { name: header.textContent, email: body.textContent, element: card };
+}
+
+function lireemail(){
+  carnet = document.getElementById("carnet-adresse");
+  composer = document.getElementById("composer-couriel");
+  button = document.getElementById("envoitbutton")
+  
+
+  carnet.style.display = "none";
+  composer.style.display = "grid";
+  button.style.display = "none"
+
+  document.getElementById("title-id").value = "";
+  document.getElementById("destinataire-id").value = "";
+  document.getElementById("content-id").value ="";
 }

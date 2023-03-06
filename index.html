@@ -27,7 +27,7 @@
     <div id="vanta"></div>
   </head>
 
-  <body onload="refreshList(); loademail()">
+  <body onload="refreshList()" >
     <!-- Pop up pour ajouter des contacts dans le carnet d'adresse-->
     <div id="wraper-popup-modifier-carnet">
       <div class="popup-modifier-carnet">
@@ -61,7 +61,7 @@
       <div class="user-cards" data-user-cards-container></div>
 
       <template data-user-template>
-        <div class="card" onclick="temp()">
+        <div class="card" onclick="lireemail()">
           <div class="header" data-header></div>
           <div class="body" data-body></div>
         </div>
@@ -96,7 +96,7 @@
       </div>
     </div>
 
-    <!-- l'interface pour composer un couriel -->
+    <!-- l'interface pour composer ou lire un couriel -->
     <div class="ui-interchangable" id="composer-couriel" style="display: none">
       <div class="composer-title">
         <input type="text" placeholder="Titre" name="titrebox" id="title-id" />
@@ -112,16 +112,10 @@
       <div class="composer-content">
         <textarea type="textarea" name="contentbox" id="content-id"></textarea>
         <div class="composer-envoyer">
-          <button class="normalize-button" onclick="send()">Envoyez</button>
+          <button class="normalize-button" onclick="send()" id="envoitbutton">Envoyez</button>
         </div>
       </div>
     </div>
 
-    <!-- l'interface pour lire un couriel -->
-    <div
-      class="ui-interchangable"
-      id="lire-couriel"
-      style="display: none"
-    ></div>
   </body>
 </html>

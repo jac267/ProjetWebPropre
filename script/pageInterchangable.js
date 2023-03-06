@@ -15,7 +15,9 @@ function showCarnetAdresse() {
 function showComposer() {
   carnet = document.getElementById("carnet-adresse");
   composer = document.getElementById("composer-couriel");
+  button = document.getElementById("envoitbutton")
 
   carnet.style.display = "none";
   composer.style.display = "grid";
+  button.style.display = "grid"
 }

@@ -45,24 +45,16 @@ function send(){
 }
 
 function loadnew(){
-    alert("loaded emails")
- /*   
-    for(var i=0;i<localStorage.nombre;i++){
-        fetch("https://jsonplaceholder.typicode.com/users")
-        .then((res) => res.json())
-        .then((data) => {
-          users = data.map((user) => {
-            const card = userCardTemplate.content.cloneNode(true).children[0];
-            const header = card.querySelector("[data-header]");
-            const body = card.querySelector("[data-body]");
-            header.textContent = user.name;
-            body.textContent = user.email;
-            userCardContainer.append(card);
-            return { name: user.name, email: user.email, element: card };
-          });
-        });
-    }
-*/
+    const nombre = localStorage.nombre
+    let emailload = JSON.parse(localStorage.getItem(nombre-1))
+
+    const card = userCardTemplate.content.cloneNode(true).children[0];
+    const header = card.querySelector("[data-header]");
+    const body = card.querySelector("[data-body]");
+    header.textContent = emailload.titre;
+    body.textContent = emailload.destinataire;
+    userCardContainer.append(card);
+    return { name: header.textContent, email: body.textContent, element: card };
 }
 
 
