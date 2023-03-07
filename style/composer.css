@@ -6,10 +6,11 @@
 }
 
 .composer-title {
+  margin-top: 8px;
   grid-column-start: 2;
   grid-column-end: 10;
-  grid-row-start: 2;
-  grid-row-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2]1;
 }
 .composer-title input {
   height: 90%;
@@ -22,7 +23,7 @@
   background-color: rgb(48, 49, 54);
 
   text-align: left;
-  font-size: 4vh;
+  font-size: 3vh;
   color: antiquewhite;
 
   resize: none;
@@ -31,8 +32,8 @@
 .composer-destinataire {
   grid-column-start: 2;
   grid-column-end: 10;
-  grid-row-start: 3;
-  grid-row-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
 
 .composer-destinataire input {
@@ -46,7 +47,7 @@
   background-color: rgb(48, 49, 54);
 
   text-align: left;
-  font-size: 4vh;
+  font-size: 3vh;
   color: antiquewhite;
 
   resize: none;
@@ -54,8 +55,8 @@
 
 .composer-content {
   grid-column-start: 2;
-  grid-column-end: 15;
-  grid-row-start: 4;
+  grid-column-end: 20;
+  grid-row-start: 3;
   grid-row-end: 10;
 }
 
@@ -70,7 +71,7 @@
   background-color: rgb(48, 49, 54);
 
   text-align: left;
-  font-size: 4vh;
+  font-size: 3vh;
   color: antiquewhite;
 
   resize: none;
@@ -84,7 +85,7 @@
 }
 
 .composer-envoyer button {
-  margin-top: 5%;
+  margin-top: 2.5%;
   height: 45px !important;
   width: 250px !important;
 

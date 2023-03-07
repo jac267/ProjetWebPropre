@@ -7,13 +7,13 @@ window.addEventListener("DOMContentLoaded", () => {
     gyroControls: false,
     minHeight: 200.0,
     minWidth: 200.0,
-    highlightColor: 0xe4e9ff,
-    midtoneColor: 0x4d34d1,
-    lowlightColor: 0x7a66db,
-    baseColor: 0xa0a51,
-    blurFactor: 0.83,
-    speed: 3.3,
-    zoom: 0.5,
+    highlightColor: 0x656a7c,
+    midtoneColor: 0x413e5e,
+    lowlightColor: 0x3a374c,
+    baseColor: 0x2021a,
+    blurFactor: 0.67,
+    speed: 0.5,
+    zoom: 0.9,
   });
   setTimeout(() => {
     const main = document.querySelector("main");

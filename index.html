@@ -45,18 +45,18 @@
     <!-- La navigation bar (les boutons pour basculer de Composer aux carnet d'adresse)-->
     <div class="navigation-bar">
       <button class="normalize-button" onclick="showCarnetAdresse()">
-        <span class="text">Carnet d'Adresse</span>
+       <i class="fa fa-address-book-o" aria-hidden="true"></i>
       </button>
 
       <button class="normalize-button" onclick="showComposer()">
-        <span class="text">Composer un courriel</span>
+        <i class="fa fa-pencil" aria-hidden="true"></i>
       </button>
     </div>
 
     <!-- La liste de tous les couriels recus -->
     <div class="list-couriel" id="liste-couriel" >
       <div class="search-wrapper">
-        <input type="search" id="liste-couriel-search" data-search />
+        <input type="search" placeholder="Courriel"id="liste-couriel-search" data-search />
       </div>
       <div class="user-cards" data-user-cards-container></div>
 
@@ -71,9 +71,9 @@
 
     <!-- l'interface du carnet d'adresse -->
     <div class="ui-interchangable" id="carnet-adresse" style="display: none">
-      <div class="carnet-adresse-title">Carnet d'addresse</div>
+      <div class="carnet-adresse-title"></div>
       <div id="carnet-adresse-search-bar">
-        <input type="text" placeholder="Search.." oninput="refreshList()"/>
+        <input type="text" placeholder="Contact" oninput="refreshList()"/>
       </div>
       <div id="carnet-adresse-list" >
         
@@ -87,12 +87,12 @@
       </div>
       <div class="carnet-adresse-modifier-adresse">
         <button type="button" class="normalize-button" onclick="triggerMod()">
-          <i class="fa fa-pencil"></i>
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         </button>
       </div>
       <div class="carnet-adresse-supprimer-adresse">
         <button type="button" class="normalize-button" onclick="remove()">
-          <i class="fas fa-minus"></i>
+          <i class="fas fa-trash"></i>
         </button>
       </div>
     </div>
@@ -113,7 +113,7 @@
       <div class="composer-content">
         <textarea type="textarea" name="contentbox" id="content-id"></textarea>
         <div class="composer-envoyer">
-          <button class="normalize-button" onclick="send()" id="envoitbutton">Envoyez</button>
+          <button class="normalize-button" onclick="send()" ><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
         </div>
       </div>
     </div>

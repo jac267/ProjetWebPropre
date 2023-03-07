@@ -18,13 +18,13 @@ body > div {
 
 .navigation-bar {
   height: 100%;
-  width: 32.5vh;
+  width: 100%;
+  float: right;
 
-  display: flex;
   justify-content: space-between;
 
   grid-column-start: 1;
-  grid-column-end: 6;
+  grid-column-end: 20;
   grid-row-start: 0;
   grid-row-end: 2;
 }
@@ -39,8 +39,6 @@ body > div {
   grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 11;
-
-  background-color: rgb(48, 49, 54);
 
   box-sizing: border-box;
 
