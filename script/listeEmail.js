@@ -16,6 +16,8 @@ searchInput.addEventListener("input", (e) => {
 });
 
 
+
+
 /*
   fetch("https://jsonplaceholder.typicode.com/users")
   .then((res) => res.json())
