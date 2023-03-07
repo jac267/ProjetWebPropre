@@ -49,10 +49,12 @@ function loadnew(){
     const card = userCardTemplate.content.cloneNode(true).children[0];
     const header = card.querySelector("[data-header]");
     const body = card.querySelector("[data-body]");
+    const content = card.querySelector("[data-content]");
     header.textContent = emailload.titre;
     body.textContent = emailload.destinataire;
+    content.textContent = emailload.contenu;
     userCardContainer.append(card);
-    return { name: header.textContent, email: body.textContent, element: card };
+    return { name: header.textContent, email: body.textContent, content: content.textContent ,element: card };
 }
 
 
