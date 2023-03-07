@@ -36,8 +36,6 @@ function send(){
         value++
         localStorage.nombre=value
         let displaytest = JSON.parse(localStorage.getItem(1))
-        console.log(displaytest)
-        console.log(displaytest.titre)
     
         loadnew()
     }
@@ -47,7 +45,7 @@ function send(){
 function loadnew(){
     const nombre = localStorage.nombre
     let emailload = JSON.parse(localStorage.getItem(nombre-1))
-
+    console.log(nombre)
     const card = userCardTemplate.content.cloneNode(true).children[0];
     const header = card.querySelector("[data-header]");
     const body = card.querySelector("[data-body]");

@@ -66,23 +66,36 @@ function emailcreate(number){
     const card = userCardTemplate.content.cloneNode(true).children[0];
     const header = card.querySelector("[data-header]");
     const body = card.querySelector("[data-body]");
+    const content = card.querySelector("[data-content]");
     header.textContent = emailload.titre;
     body.textContent = emailload.destinataire;
+    content.textContent = emailload.contenu;
     userCardContainer.append(card);
-    return { name: header.textContent, email: body.textContent, element: card };
+    return { name: header.textContent, email: body.textContent, content: content.textContent ,element: card };
 }
 
-function lireemail(){
+function lireemail(card){
   carnet = document.getElementById("carnet-adresse");
   composer = document.getElementById("composer-couriel");
   button = document.getElementById("envoitbutton")
-  
+  texttitre = document.getElementById("title-id");
+  textdest = document.getElementById("destinataire-id");
+  textcontenu = document.getElementById("content-id");
 
+  const title_sender = card.querySelector("[data-header]").textContent
+  const sender = card.querySelector("[data-body]").textContent
+  const content_sender = card.querySelector("[data-content]").textContent
+  
   carnet.style.display = "none";
   composer.style.display = "grid";
   button.style.display = "none"
+  
+  texttitre.readOnly=true
+  textdest.readOnly=true
+  textcontenu.readOnly=true
 
-  document.getElementById("title-id").value = "";
-  document.getElementById("destinataire-id").value = "";
-  document.getElementById("content-id").value ="";
+
+  texttitre.value = title_sender;
+  textdest.value = "De: "+sender;
+  textcontenu.value =content_sender;
 }
