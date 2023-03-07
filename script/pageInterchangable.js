@@ -12,20 +12,20 @@ function showCarnetAdresse() {
   composer.style.display = "none";
 }
 
-function showComposer() {
+function showComposer(x) {
   carnet = document.getElementById("carnet-adresse");
   composer = document.getElementById("composer-couriel");
-  button = document.getElementById("envoitbutton")
-  
+  button = document.getElementById("envoitbutton");
+
   carnet.style.display = "none";
   composer.style.display = "grid";
-  button.style.display = "grid"
+  button.style.display = "grid";
 
   document.getElementById("title-id").value = "";
   document.getElementById("destinataire-id").value = "";
-  document.getElementById("content-id").value ="";
+  document.getElementById("content-id").value = "";
 
-  texttitre.readOnly=false
-  textdest.readOnly=false
-  textcontenu.readOnly=false
+  texttitre.readOnly = false;
+  textdest.readOnly = false;
+  textcontenu.readOnly = false;
 }

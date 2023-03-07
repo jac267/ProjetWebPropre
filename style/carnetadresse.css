@@ -81,8 +81,7 @@
   border: 1px;
   border-style: solid;
   border-radius: 5px;
-
-  color: black;
+  size: fit-content;
 }
 
 .selected {
@@ -105,10 +104,15 @@
   grid-row-start: 1;
   grid-row-end: 1;
 }
-
-.carnet-adresse-supprimer-adresse {
+.carnet-adresse-destinataire-adresse {
   grid-column-start: 13;
   grid-column-end: 14;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.carnet-adresse-supprimer-adresse {
+  grid-column-start: 14;
+  grid-column-end: 15;
   grid-row-start: 1;
   grid-row-end: 1;
 }

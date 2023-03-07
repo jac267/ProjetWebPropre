@@ -16,10 +16,23 @@
 
 .normalize-button:hover {
   transform: translateY(1px);
+  background-color: antiquewhite;
+  border-color: antiquewhite;
+  color: #7289da;
 }
 .normalize-button:active {
   transform: translateY(2px);
 }
 .normalize-button {
   outline: transparent !important;
+}
+.compose-button:hover::after {
+  content: attr(data-tooltip);
+  transition: 60ms;
+}
+.contact-button:hover::after {
+  content: attr(data-tooltip);
+}
+.envoyez-button:hover::after {
+  content: attr(data-tooltip);
 }

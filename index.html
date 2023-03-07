@@ -45,11 +45,12 @@
     <!-- La navigation bar (les boutons pour basculer de Composer aux carnet d'adresse)-->
     <div class="navigation-bar">
       <button class="normalize-button" onclick="showCarnetAdresse()">
-       <i class="fa fa-address-book-o" aria-hidden="true"></i>
+      <div class="contact-button" data-tooltip="Contact"><i class="fa fa-address-book-o" aria-hidden="true"></i></div>
       </button>
-
-      <button class="normalize-button" onclick="showComposer()">
+      <button class="normalize-button"  onclick="showComposer()">
+      <div class="compose-button" data-tooltip="Écrire un courriel">
         <i class="fa fa-pencil" aria-hidden="true"></i>
+      </div>
       </button>
     </div>
 
@@ -90,6 +91,11 @@
           <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         </button>
       </div>
+      <div class="carnet-adresse-destinataire-adresse">
+        <button type="button" class="normalize-button" onclick="showComposer()">
+          <i class="fa fa-comments" aria-hidden="true"></i>
+        </button>
+      </div>
       <div class="carnet-adresse-supprimer-adresse">
         <button type="button" class="normalize-button" onclick="remove()">
           <i class="fas fa-trash"></i>
@@ -113,7 +119,10 @@
       <div class="composer-content">
         <textarea type="textarea" name="contentbox" id="content-id"></textarea>
         <div class="composer-envoyer">
-          <button class="normalize-button" id="buttonenvoi" onclick="send()" ><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+          <button class="normalize-button" id="buttonenvoi" onclick="send()" >
+            <div class="envoyez-button" data-tooltip="Envoyez" >
+            <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+        </div>
         </div>
       </div>
     </div>
