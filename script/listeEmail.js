@@ -90,7 +90,7 @@ function lireemail(card){
   
   carnet.style.display = "none";
   composer.style.display = "grid";
-  button.style.display = "none"
+  buttonenvoi.style.display = "none"
   
   texttitre.readOnly=true
   textdest.readOnly=true
