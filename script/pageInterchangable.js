@@ -19,7 +19,7 @@ function showComposer(x) {
 
   carnet.style.display = "none";
   composer.style.display = "grid";
-  button.style.display = "grid";
+  buttonenvoi.style.display = "grid";
 
   document.getElementById("title-id").value = "";
   document.getElementById("destinataire-id").value = "";
@@ -28,4 +28,13 @@ function showComposer(x) {
   texttitre.readOnly = false;
   textdest.readOnly = false;
   textcontenu.readOnly = false;
+}
+
+function contactimport(){
+  carnet = document.getElementById("carnet-adresse");
+  composer = document.getElementById("composer-couriel");
+
+  carnet.style.display = "grid";
+  composer.style.display = "none";
+  
 }

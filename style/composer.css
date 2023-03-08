@@ -10,7 +10,7 @@
   grid-column-start: 2;
   grid-column-end: 10;
   grid-row-start: 1;
-  grid-row-end: 2]1;
+  grid-row-end: 2;
 }
 .composer-title input {
   height: 90%;
@@ -91,3 +91,11 @@
 
   font-size: 18px;
 }
+
+.composer-contact button {
+  margin-top: 2.5%;
+  height: 45px !important;
+  width: 250px !important;
+
+  font-size: 18px;
+} 
