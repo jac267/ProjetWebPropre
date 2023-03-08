@@ -63,3 +63,9 @@ function remove() {
   localStorage.setItem("carnetDAdresse", JSON.stringify(carnetDAdresse));
   refreshList();
 }
+
+function contactImportLoad(){
+  var selected = document.getElementsByClassName("selected")
+  contact =selected[0].textContent
+  showComposer(contact)
+}
