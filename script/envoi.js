@@ -1,10 +1,4 @@
-if (localStorage.nombre==null){
-    localStorage.nombre=0;
-    let emailist= [];
-    localStorage.email=emailist;
-  }
-
-
+/*Fonction qui va permettre d'envoyer un courriel au localstorage, elle va enregistrer les données des champs de texts et les sauvegarder en localStorage */
 function send(){
     
     
@@ -41,7 +35,7 @@ function send(){
     }
 
 }
-
+/* fonction permetant de créer la ''card'' du nouveau courriel */
 function loadnew(){
     const nombre = localStorage.nombre
     let emailload = JSON.parse(localStorage.getItem(nombre-1))

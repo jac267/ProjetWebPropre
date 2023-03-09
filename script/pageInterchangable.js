@@ -1,19 +1,19 @@
+/* Si cela est la première fois que l'on charge la page, nous allons créer le localstorage qui contiendra et contera les émails*/
 if (localStorage.nombre == null) {
   localStorage.nombre = 0;
   let emailist = [];
   localStorage.email = emailist;
 }
 
+/* Fonction qui va alterner entre le carnet d'adresse et le compositeur */
 function showCarnetAdresse() {
   carnet = document.getElementById("carnet-adresse");
   composer = document.getElementById("composer-couriel");
-   
-
 
   carnet.style.display = "grid";
   composer.style.display = "none";
 }
-
+/* Fonction qui va alterner entre le carnet d'adresse et le compositeur aussi, celle-ci va aussi prendre en compte l'ajout d'un contact */
 function showComposer(name) {
   carnet = document.getElementById("carnet-adresse");
   composer = document.getElementById("composer-couriel");
@@ -36,12 +36,3 @@ function showComposer(name) {
   textcontenu.readOnly = false;
 }
 
-function contactimport(){
-  carnet = document.getElementById("carnet-adresse");
-  composer = document.getElementById("composer-couriel");
-
-
-  carnet.style.display = "grid";
-  composer.style.display = "none";
-  
-}

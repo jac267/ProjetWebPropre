@@ -29,10 +29,8 @@ function addEmail() {
 </li>`;
   buttonList.appendChild(newButton);
 }
-function temp() {
-  alert("Va ouvrir le courriel");
-}
 
+/* Fonction qui va créer la loop pour recréer la ''card'' de chaque courriel lorsqu'on charche la page */
 function loadinit() {
   const nombre = localStorage.nombre;
   console.log(nombre);
@@ -40,7 +38,7 @@ function loadinit() {
     emailcreate(i);
   }
 }
-
+/* Fonction qui s'occupe de spécifiquement de créer une seule ''card'' , elle doit être utilisé avec loadinit() pour bien fonctionner */
 function emailcreate(number) {
   let emailload = JSON.parse(localStorage.getItem(number));
   //console.log(number)
@@ -59,7 +57,7 @@ function emailcreate(number) {
     element: card,
   };
 }
-
+/* Fonction qui réusine la page de composition de courriel en une page de lecture, dans ce cas le courriel qui sera chargé sera read-only et on ne pourra pas modifier le contenu du courriel */
 function lireemail(card) {
   carnet = document.getElementById("carnet-adresse");
   composer = document.getElementById("composer-couriel");
