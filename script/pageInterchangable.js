@@ -21,7 +21,8 @@ function showComposer(name) {
 
   carnet.style.display = "none";
   composer.style.display = "grid";
-  buttonenvoi.style.display = "centered";
+  buttonenvoi.style.display = "initial";
+
   if (typeof name === 'undefined' ){name = ""}
     else{name = document.getElementById("destinataire-id").value +";"+ name}
   console.log(name)
