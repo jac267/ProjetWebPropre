@@ -19,10 +19,7 @@ body > div {
 .navigation-bar {
   height: 100%;
   width: 100%;
-  float: right;
-
   justify-content: space-between;
-
   grid-column-start: 1;
   grid-column-end: 20;
   grid-row-start: 0;
@@ -65,4 +62,10 @@ body > div {
   height: 100%;
 
   opacity: 1 !important;
+}
+.navigation-bar > .compose-button {
+  grid-column-start: 19;
+  grid-column-end: 20;
+  grid-row-start: 0;
+  grid-row-end: 1;
 }
