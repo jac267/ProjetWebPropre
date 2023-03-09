@@ -8,9 +8,9 @@ if (localStorage.nombre==null){
 function send(){
     
     
-    var titre_txt =document.getElementById("title-id").value;
-    var receiver_txt =document.getElementById("destinataire-id").value;
-    var content_txt =document.getElementById("content-id").value;
+    let titre_txt =document.getElementById("title-id").value;
+    let receiver_txt =document.getElementById("destinataire-id").value;
+    let content_txt =document.getElementById("content-id").value;
 
     if(titre_txt.length == 0){alert("Veiller rajouter un titre")}
     if(receiver_txt.length == 0){alert("Veiller rajouter un destinataire")}

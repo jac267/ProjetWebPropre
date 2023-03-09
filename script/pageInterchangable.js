@@ -8,13 +8,7 @@ function showCarnetAdresse() {
   carnet = document.getElementById("carnet-adresse");
   composer = document.getElementById("composer-couriel");
    
-  ajouterAdresse = document.getElementById("addAdresse")
-  modifierAdresse = document.getElementById("modAdresse")
-  supprimerAdresse = document.getElementById("supAdresse")
 
-  ajouterAdresse.style.display = "grid";
-  modifierAdresse.style.display = "grid";
-  supprimerAdresse.style.display = "grid";
 
   carnet.style.display = "grid";
   composer.style.display = "none";
@@ -27,12 +21,12 @@ function showComposer(name) {
 
   carnet.style.display = "none";
   composer.style.display = "grid";
-  buttonenvoi.style.display = "grid";
+  buttonenvoi.style.display = "centered";
   contactenvoi.style.display ="grid";
   if (typeof name === 'undefined' ){name = ""}
     else{name = document.getElementById("destinataire-id").value +";"+ name}
   console.log(name)
-  var test = name
+  let test = name
   document.getElementById("title-id").value = "";
   document.getElementById("destinataire-id").value = test;
   document.getElementById("content-id").value = "";
@@ -46,14 +40,8 @@ function contactimport(){
   carnet = document.getElementById("carnet-adresse");
   composer = document.getElementById("composer-couriel");
 
-  ajouterAdresse = document.getElementById("addAdresse")
-  modifierAdresse = document.getElementById("modAdresse")
-  supprimerAdresse = document.getElementById("supAdresse")
 
   carnet.style.display = "grid";
   composer.style.display = "none";
   
-  ajouterAdresse.style.display = "none";
-  modifierAdresse.style.display = "none";
-  supprimerAdresse.style.display = "none";
 }

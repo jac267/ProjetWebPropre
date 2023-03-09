@@ -39,7 +39,7 @@ function refreshList() {
 
 function triggerMod() {
   myElement = document.getElementsByClassName("selected")[0];
-  var event = new MouseEvent("dblclick", {
+  let event = new MouseEvent("dblclick", {
     view: window,
     bubbles: true,
     cancelable: true,
@@ -65,7 +65,7 @@ function remove() {
 }
 
 function contactImportLoad(){
-  var selected = document.getElementsByClassName("selected")
+  let selected = document.getElementsByClassName("selected")
   contact =selected[0].textContent
   showComposer(contact)
 }

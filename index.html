@@ -130,6 +130,20 @@
         </div>
       </div>
     </div>
+    
+    <!-- Pop up pour ajouter des contacts dans le carnet d'adresse WIP-->
+    <div id="wraper-popup-modifier-carnet">
+      <div class="popup-modifier-carnet">
+        <input type="text" id="contact-name-field" placeholder="Name"></input>
+        <button onclick="sauvegarder()" id="contact-conffirmer-button" class="normalize-button">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </button>
+        <button onclick="fermer();" id="contact-annulez-button" class="normalize-button">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <textarea type="textarea" id="contact-public-key-field" placeholder="public-key"></textarea>
+      </div>    
+    </div>
 
   </body>
 </html>
