@@ -22,7 +22,6 @@ function showComposer(name) {
   carnet.style.display = "none";
   composer.style.display = "grid";
   buttonenvoi.style.display = "centered";
-  contactenvoi.style.display ="grid";
   if (typeof name === 'undefined' ){name = ""}
     else{name = document.getElementById("destinataire-id").value +";"+ name}
   console.log(name)

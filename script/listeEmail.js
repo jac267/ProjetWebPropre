@@ -75,7 +75,6 @@ function lireemail(card) {
   carnet.style.display = "none";
   composer.style.display = "grid";
   buttonenvoi.style.display = "none";
-  contactenvoi.style.display ="none";
 
   texttitre.readOnly = true;
   textdest.readOnly = true;
