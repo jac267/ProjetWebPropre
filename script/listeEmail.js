@@ -3,14 +3,21 @@ const userCardContainer = document.querySelector("[data-user-cards-container]");
 const searchInput = document.querySelector("[data-search]");
 
 let users = [];
-
+for (let i = 0; i < localStorage.nombre; i++) {
+  let temp = JSON.parse(localStorage.getItem(i));
+  let tempArray = [];
+  tempArray.push(temp.titre);
+  tempArray.push(temp.destinataire);
+  users.push(tempArray);
+}
 searchInput.addEventListener("input", (e) => {
   const value = e.target.value.toLowerCase();
   users.forEach((user) => {
     const isVisible =
-      user.name.toLowerCase().includes(value) ||
-      user.email.toLowerCase().includes(value);
-    user.element.classList.toggle("hide", !isVisible);
+      user[0].toLowerCase().includes(value) ||
+      user[1].toLowerCase().includes(value);
+    let toggleTemp = document.getElementById(`${users.indexOf(user)}`);
+    toggleTemp.classList.toggle("hide", !isVisible);
   });
 });
 
@@ -21,7 +28,7 @@ function addEmail() {
   var buttonList = document.getElementById("button-list");
   var newButton = document.createElement("li");
   newButton.innerHTML = `<li>
-  <div class="email-card" onclick="addButton()">
+  <div class="email-card" id="${localStorage.nombre - 1}"onclick="addButton()">
     <div class="email">s</div>
     <div class="titre">d</div>
     <div class="contact">s</div>
