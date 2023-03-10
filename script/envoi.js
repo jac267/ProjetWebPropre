@@ -6,13 +6,15 @@ function send() {
   let content_txt = document.getElementById("content-id").value;
 
   if (titre_txt.length == 0) {
-    erreur += "\n   un titre ";
+    erreur += "<br>&emsp;&emsp;&emsp;&emsp; - un titre ";
   }
+  console.log(erreur);
   if (receiver_txt.length == 0) {
-    erreur += "\n   un destinataire ";
+    erreur += "<br>&emsp;&emsp;&emsp;&emsp; - un destinataire ";
   }
+  console.log(erreur);
   if (content_txt.length == 0) {
-    erreur += "\n   un message ";
+    erreur += "<br>&emsp;&emsp;&emsp;&emsp; - un message ";
   }
 
   if (titre_txt.length && receiver_txt.length && content_txt.length != 0) {
