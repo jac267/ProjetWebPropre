@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="style/listeemail.css" />
     <link rel="stylesheet" href="style/carnetadresse.css" />
     <link rel="stylesheet" href="style/composer.css" />
+    <link rel="stylesheet" href="style/popUp-envoi.css">
 
+    <script src="script/popUpEnvoi.js" ></script>
     <script src="script/popUpModifierCarnet.js" defer></script>
     <script src="script/pageInterchangable.js" defer></script>
     <script src="script/listeEmail.js" defer></script>
@@ -127,19 +129,14 @@
       </div>
     </div>
     
-    <!-- Pop up pour ajouter des contacts dans le carnet d'adresse-->
-    <div id="wraper-popup-modifier-carnet">
-      <div class="popup-modifier-carnet">
-        <input type="text" id="contact-name-field" placeholder="Name"></input>
-        <button onclick="sauvegarder()" id="contact-conffirmer-button" class="normalize-button">
-          <i class="fa fa-check" aria-hidden="true"></i>
-        </button>
-        <button onclick="fermer();" id="contact-annulez-button" class="normalize-button">
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </button>
-        <textarea type="textarea" id="contact-public-key-field" placeholder="public-key"></textarea>
-      </div>    
+    <!-- Pop up pour afficher si un courriel a été envoyé ou qu'il y manque qqch-->
+    <div id="wraper-popup-envoi" style="display: none;">
+      <script>
+        window.addEventListener("DOMContentLoaded", fermerconfirmation())
+      </script>
+      <div class="popup-envoi">
+        <div id="envoi-message">Message envoyé avec succès !</div>
     </div>
-
+    
   </body>
 </html>

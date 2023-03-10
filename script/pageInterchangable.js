@@ -24,12 +24,15 @@ function showComposer(name) {
   buttonenvoi.style.display = "initial";
 
   if (typeof name === 'undefined' ){name = ""}
-    else{name = document.getElementById("destinataire-id").value +";"+ name}
-  console.log(name)
+  else{name = document.getElementById("destinataire-id").value +";"+ name}
   let test = name
   document.getElementById("title-id").value = "";
   document.getElementById("destinataire-id").value = test;
   document.getElementById("content-id").value = "";
+
+  texttitre = document.getElementById("title-id");
+  textdest = document.getElementById("destinataire-id");
+  textcontenu = document.getElementById("content-id");
 
   texttitre.readOnly = false;
   textdest.readOnly = false;
