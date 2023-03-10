@@ -54,12 +54,12 @@
       <div class="contact-button" data-tooltip="Contact"><i class="fa fa-address-book-o" aria-hidden="true"></i></div>
     </button>
   </div>
-
+  <!--Search bar pour la liste des courriels-->
+  <div class="search-wrapper">
+    <input type="search" placeholder="Courriel" id="liste-couriel-search" data-search />
+  </div>
   <!-- La liste de tous les couriels recus -->
   <div class="list-couriel" id="liste-couriel">
-    <div class="search-wrapper">
-      <input type="search" placeholder="Courriel" id="liste-couriel-search" data-search />
-    </div>
     <div class="user-cards" data-user-cards-container></div>
 
     <template data-user-template>
@@ -126,14 +126,12 @@
 
   <!-- Pop up pour afficher si un courriel a été envoyé ou qu'il y manque qqch-->
   <div id="wraper-popup-envoi" style="display: none;">
-    <script>
-      window.addEventListener("DOMContentLoaded", fermerconfirmation())
-    </script>
+
     <div class="popup-envoi">
       <button onclick="Restore();" id="popUp-envoi-button" class="normalize-button">
         <i class="fa fa-times" aria-hidden="true"></i>
       </button>
-      <div id="envoi-message">Message envoyé avec succès!</div>
+      <div id="envoi-message"></div>
     </div>
 
 </body>

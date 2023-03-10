@@ -41,7 +41,6 @@ function loadinit() {
 /* Fonction qui s'occupe de spécifiquement de créer une seule ''card'' , elle doit être utilisé avec loadinit() pour bien fonctionner */
 function emailcreate(number) {
   let emailload = JSON.parse(localStorage.getItem(number));
-  //console.log(number)
   const card = userCardTemplate.content.cloneNode(true).children[0];
   const header = card.querySelector("[data-header]");
   const body = card.querySelector("[data-body]");

@@ -30,7 +30,7 @@ function sauvegarder() {
   if (carnetDAdresse != null) {
     localStorageSize = carnetDAdresse.valeur.length;
   }
-  console.log();
+
   let dict_contact = {
     Name: document.getElementById("contact-name-field").value,
     PublicKey: document.getElementById("contact-public-key-field").value,

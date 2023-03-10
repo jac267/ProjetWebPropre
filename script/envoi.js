@@ -1,4 +1,5 @@
 /*Fonction qui va permettre d'envoyer un courriel au localstorage, elle va enregistrer les données des champs de texts et les sauvegarder en localStorage */
+
 function send() {
   let erreur = "";
   let titre_txt = document.getElementById("title-id").value;
@@ -8,11 +9,10 @@ function send() {
   if (titre_txt.length == 0) {
     erreur += "<br>&emsp;&emsp;&emsp;&emsp; - un titre ";
   }
-  console.log(erreur);
   if (receiver_txt.length == 0) {
     erreur += "<br>&emsp;&emsp;&emsp;&emsp; - un destinataire ";
   }
-  console.log(erreur);
+
   if (content_txt.length == 0) {
     erreur += "<br>&emsp;&emsp;&emsp;&emsp; - un message ";
   }
@@ -27,18 +27,19 @@ function send() {
     email.destinataire = receiver_txt;
     email.contenu = content_txt;
     let emailstr = JSON.stringify(email);
-
     let value = localStorage.nombre;
 
     localStorage.setItem(value, emailstr);
     value++;
     localStorage.nombre = value;
     let displaytest = JSON.parse(localStorage.getItem(1));
+    let texteErreur = document.getElementById("envoi-message");
+    let msgerreur = (texteErreur.innerHTML = "Message envoyé avec succès!");
     Spawn();
     loadnew();
   } else {
-    const texteErreur = document.getElementById("envoi-message");
-    const msgerreur = (texteErreur.innerHTML = "Ajoutez : " + erreur);
+    let texteErreur = document.getElementById("envoi-message");
+    let msgerreur = (texteErreur.innerHTML = "Ajoutez : " + erreur);
     Spawn();
   }
 }

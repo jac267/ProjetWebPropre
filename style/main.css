@@ -41,13 +41,18 @@ body > div {
 
   overflow: hidden;
 }
-
+.search-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
 .list-couriel {
   min-height: 100%;
 
   grid-column-start: 1;
   grid-column-end: 1;
-  grid-row-start: 2;
+  grid-row-start: 3;
   grid-row-end: 11;
 
   box-sizing: border-box;
