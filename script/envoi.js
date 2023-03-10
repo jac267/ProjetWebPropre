@@ -33,10 +33,8 @@ function send(){
         loadnew()
     }
     else{
-        console.log(erreur)
         const texteErreur = document.getElementById("envoi-message")
         const msgerreur = texteErreur.innerHTML = "Veillez rajouter le ou les éléments manquant suivant : "+erreur
-        console.log(msgerreur)
         Spawn()
     }
 }
