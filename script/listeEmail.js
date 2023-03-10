@@ -16,6 +16,7 @@ searchInput.addEventListener("input", (e) => {
 
 loadinit();
 
+/*Fonction qui va créer le code HTML pour chaque ''card''*/
 function addEmail() {
   var buttonList = document.getElementById("button-list");
   var newButton = document.createElement("li");
@@ -56,7 +57,7 @@ function emailcreate(number) {
     element: card,
   };
 }
-/* Fonction qui réusine la page de composition de courriel en une page de lecture, dans ce cas le courriel qui sera chargé sera read-only et on ne pourra pas modifier le contenu du courriel */
+/* Fonction qui ré-usine la page de composition de courriel en une page de lecture, dans ce cas le courriel qui sera chargé sera read-only et on ne pourra pas modifier le contenu du courriel */
 function lireemail(card) {
   carnet = document.getElementById("carnet-adresse");
   composer = document.getElementById("composer-couriel");

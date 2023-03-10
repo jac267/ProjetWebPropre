@@ -1,3 +1,4 @@
+/* Fonction qui définit lorsque l'on sélectionne un contact */
 function updateList(selected) {
   myElement = document.getElementById("carnet-adresse-list");
 
@@ -13,7 +14,7 @@ function updateList(selected) {
     }
   }
 }
-
+/* Fonction qui va rafraishir les contacts */
 function refreshList() {
   let carnetDAdresse = JSON.parse(localStorage.getItem("carnetDAdresse"));
   let autoCompletContent = document.getElementById("carnet-adresse-search-bar")
@@ -36,7 +37,7 @@ function refreshList() {
     }
   }
 }
-
+/* Fonction permettant d'afficher le menu pour modifier un contact lorsque l'on le double clique */
 function triggerMod() {
   myElement = document.getElementsByClassName("selected")[0];
   let event = new MouseEvent("dblclick", {
@@ -47,6 +48,7 @@ function triggerMod() {
   myElement.dispatchEvent(event);
 }
 
+/* Fonction permettant de retirer un contact et de le retirer du localstorage*/
 function remove() {
   myElement = document.getElementsByClassName("selected")[0];
   const index = parseInt(
@@ -63,7 +65,7 @@ function remove() {
   localStorage.setItem("carnetDAdresse", JSON.stringify(carnetDAdresse));
   refreshList();
 }
-
+/* Fonction qui permet de charger un contact dans le menu composer */
 function contactImportLoad(){
   let selected = document.getElementsByClassName("selected")
   contact =selected[0].textContent

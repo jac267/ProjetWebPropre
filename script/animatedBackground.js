@@ -1,4 +1,5 @@
 // code trouver sur : https://www.vantajs.com/
+/* Code qui permet de charger l'arrière plan */
 window.addEventListener("DOMContentLoaded", () => {
   VANTA.FOG({
     el: "#vanta",

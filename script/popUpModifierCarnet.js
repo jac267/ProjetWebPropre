@@ -23,6 +23,7 @@ function fermer() {
   document.getElementById("contact-public-key-field").value = "";
 }
 
+
 function sauvegarder() {
   let localStorageSize = 0;
   let carnetDAdresse = JSON.parse(localStorage.getItem("carnetDAdresse"));
