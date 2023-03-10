@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="style/listeemail.css" />
   <link rel="stylesheet" href="style/carnetadresse.css" />
   <link rel="stylesheet" href="style/composer.css" />
-    <link rel="stylesheet" href="style/popUp-envoi.css">
+  <link rel="stylesheet" href="style/popUp-envoi.css">
 
-    <script src="script/popUpEnvoi.js" ></script>
+  <script src="script/popUpEnvoi.js"></script>
   <script src="script/popUpModifierCarnet.js" defer></script>
   <script src="script/pageInterchangable.js" defer></script>
   <script src="script/listeEmail.js" defer></script>
@@ -104,33 +104,38 @@
     </div>
   </div>
 
-    <!-- l'interface pour composer ou lire un couriel -->
-    <div class="ui-interchangable" id="composer-couriel" style="display: none">
-      <div class="composer-title">
-        <input type="text" placeholder="Titre" name="titrebox" id="title-id" />
-      </div>
-      <div class="composer-destinataire">
-        <input type="text" placeholder="Destinataire" name="destinatairebox" id="destinataire-id"/>
-      </div>
-      <div class="composer-content">
-        <textarea type="textarea" name="contentbox" id="content-id"></textarea>
-        <div class="composer-envoyer">
-          <button class="normalize-button" id="buttonenvoi" onclick="send()" >
-            <div class="envoyez-button" data-tooltip="Envoyez" >
-            <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-        </div>
-        </div>
+  <!-- l'interface pour composer ou lire un couriel -->
+  <div class="ui-interchangable" id="composer-couriel" style="display: none">
+    <div class="composer-title">
+      <input type="text" placeholder="Titre" name="titrebox" id="title-id" />
+    </div>
+    <div class="composer-destinataire">
+      <input type="text" placeholder="Destinataire" name="destinatairebox" id="destinataire-id" />
+    </div>
+    <div class="composer-content">
+      <textarea type="textarea" name="contentbox" id="content-id"></textarea>
+      <div class="composer-envoyer">
+        <button class="normalize-button" id="buttonenvoi" onclick="send()">
+          <div class="envoyez-button" data-tooltip="Envoyez">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
-    
-    <!-- Pop up pour afficher si un courriel a été envoyé ou qu'il y manque qqch-->
-    <div id="wraper-popup-envoi" style="display: none;">
-      <script>
-        window.addEventListener("DOMContentLoaded", fermerconfirmation())
-      </script>
-      <div class="popup-envoi">
-        <div id="envoi-message">Message envoyé avec succès !</div>
+  </div>
+  </div>
+
+  <!-- Pop up pour afficher si un courriel a été envoyé ou qu'il y manque qqch-->
+  <div id="wraper-popup-envoi" style="display: none;">
+    <script>
+      window.addEventListener("DOMContentLoaded", fermerconfirmation())
+    </script>
+    <div class="popup-envoi">
+      <button onclick="Restore();" id="popUp-envoi-button" class="normalize-button">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+      <div id="envoi-message">Message envoyé avec succès!</div>
     </div>
-    
-  </body>
+
+</body>
+
 </html>

@@ -25,7 +25,9 @@
 
   background-color: rgb(48, 49, 54);
 
-  border-radius: 25px;
+  border-radius: 10px;
+  border-color: #888;
+  border-style: solid;
 }
 
 #contact-name-field {

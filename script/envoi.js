@@ -1,42 +1,44 @@
 /*Fonction qui va permettre d'envoyer un courriel au localstorage, elle va enregistrer les données des champs de texts et les sauvegarder en localStorage */
-function send(){
-    
-    let erreur = "";
-    let titre_txt =document.getElementById("title-id").value;
-    let receiver_txt =document.getElementById("destinataire-id").value;
-    let content_txt =document.getElementById("content-id").value;
+function send() {
+  let erreur = "";
+  let titre_txt = document.getElementById("title-id").value;
+  let receiver_txt = document.getElementById("destinataire-id").value;
+  let content_txt = document.getElementById("content-id").value;
 
-    if(titre_txt.length == 0){erreur = erreur + "un titre "}
-    if(receiver_txt.length == 0){erreur = erreur + "un destinataire "}
-    if(content_txt.length == 0){erreur = erreur + "du contenu "}
-    
-    if(titre_txt.length && receiver_txt.length && content_txt.length != 0){
+  if (titre_txt.length == 0) {
+    erreur += "\n   un titre ";
+  }
+  if (receiver_txt.length == 0) {
+    erreur += "\n   un destinataire ";
+  }
+  if (content_txt.length == 0) {
+    erreur += "\n   un message ";
+  }
 
-        document.getElementById("title-id").value = "";
-        document.getElementById("destinataire-id").value = "";
-        document.getElementById("content-id").value ="";
-       
-        
-        let email ={};
-        email.titre = titre_txt
-        email.destinataire = receiver_txt
-        email.contenu = content_txt
-        let emailstr = JSON.stringify(email);
-        
-        let value = localStorage.nombre;
+  if (titre_txt.length && receiver_txt.length && content_txt.length != 0) {
+    document.getElementById("title-id").value = "";
+    document.getElementById("destinataire-id").value = "";
+    document.getElementById("content-id").value = "";
 
-        localStorage.setItem(value,emailstr)
-        value++
-        localStorage.nombre=value
-        let displaytest = JSON.parse(localStorage.getItem(1))
-        Spawn()
-        loadnew()
-    }
-    else{
-        const texteErreur = document.getElementById("envoi-message")
-        const msgerreur = texteErreur.innerHTML = "Veillez rajouter le ou les éléments manquant suivant : "+erreur
-        Spawn()
-    }
+    let email = {};
+    email.titre = titre_txt;
+    email.destinataire = receiver_txt;
+    email.contenu = content_txt;
+    let emailstr = JSON.stringify(email);
+
+    let value = localStorage.nombre;
+
+    localStorage.setItem(value, emailstr);
+    value++;
+    localStorage.nombre = value;
+    let displaytest = JSON.parse(localStorage.getItem(1));
+    Spawn();
+    loadnew();
+  } else {
+    const texteErreur = document.getElementById("envoi-message");
+    const msgerreur = (texteErreur.innerHTML = "Ajoutez : " + erreur);
+    Spawn();
+  }
 }
 /* fonction permetant de créer la ''card'' du nouveau courriel */
 function loadnew() {
