@@ -85,17 +85,7 @@
 }
 
 .composer-envoyer button {
-  margin-top: 2.5%;
-  height: 45px !important;
-  width: 250px !important;
-
-  font-size: 18px;
+  margin-top: 0.5vh;
+  width: 25%;
+  font-size: large;
 }
-
-.composer-contact button {
-  margin-top: 2.5%;
-  height: 45px !important;
-  width: 250px !important;
-
-  font-size: 18px;
-} 

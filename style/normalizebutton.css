@@ -26,9 +26,9 @@
 .normalize-button {
   outline: transparent !important;
 }
+
 .compose-button:hover::after {
   content: attr(data-tooltip);
-  transition: 60ms;
 }
 .contact-button:hover::after {
   content: attr(data-tooltip);

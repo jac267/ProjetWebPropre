@@ -5,24 +5,19 @@
 }
 
 #carnet-adresse button {
-  width: 7.5vh;
-  height: 7.5vh;
+  width: 5vh;
+  height: 5vh;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
 }
-/*
-.carnet-adresse-title {
-  font-size: 50px;
 
-  grid-column-start: 2;
-  grid-column-end: 20;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-*/
 #carnet-adresse-search-bar {
   grid-column-start: 2;
-  grid-column-end: 10;
+  grid-column-end: 12;
   grid-row-start: 1;
   grid-row-end: 1;
+  margin-right: 4vh;
 }
 
 #carnet-adresse-search-bar input[type="text"] {
@@ -92,27 +87,27 @@
 }
 
 .carnet-adresse-ajouter-adresse {
-  grid-column-start: 11;
-  grid-column-end: 12;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-
-.carnet-adresse-modifier-adresse {
   grid-column-start: 12;
   grid-column-end: 13;
   grid-row-start: 1;
   grid-row-end: 1;
 }
-.carnet-adresse-destinataire-adresse {
+
+.carnet-adresse-modifier-adresse {
   grid-column-start: 13;
   grid-column-end: 14;
   grid-row-start: 1;
   grid-row-end: 1;
 }
-.carnet-adresse-supprimer-adresse {
+.carnet-adresse-destinataire-adresse {
   grid-column-start: 14;
   grid-column-end: 15;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.carnet-adresse-supprimer-adresse {
+  grid-column-start: 15;
+  grid-column-end: 16;
   grid-row-start: 1;
   grid-row-end: 1;
 }

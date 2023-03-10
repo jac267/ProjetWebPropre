@@ -41,19 +41,22 @@ function send(){
     }
 }
 /* fonction permetant de créer la ''card'' du nouveau courriel */
-function loadnew(){
-    const nombre = localStorage.nombre
-    let emailload = JSON.parse(localStorage.getItem(nombre-1))
-    console.log(nombre)
-    const card = userCardTemplate.content.cloneNode(true).children[0];
-    const header = card.querySelector("[data-header]");
-    const body = card.querySelector("[data-body]");
-    const content = card.querySelector("[data-content]");
-    header.textContent = emailload.titre;
-    body.textContent = emailload.destinataire;
-    content.textContent = emailload.contenu;
-    userCardContainer.append(card);
-    return { name: header.textContent, email: body.textContent, content: content.textContent ,element: card };
+function loadnew() {
+  const nombre = localStorage.nombre;
+  let emailload = JSON.parse(localStorage.getItem(nombre - 1));
+  console.log(nombre);
+  const card = userCardTemplate.content.cloneNode(true).children[0];
+  const header = card.querySelector("[data-header]");
+  const body = card.querySelector("[data-body]");
+  const content = card.querySelector("[data-content]");
+  header.textContent = emailload.titre;
+  body.textContent = emailload.destinataire;
+  content.textContent = emailload.contenu;
+  userCardContainer.append(card);
+  return {
+    name: header.textContent,
+    email: body.textContent,
+    content: content.textContent,
+    element: card,
+  };
 }
-
-
