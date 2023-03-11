@@ -3,17 +3,7 @@ const userCardContainer = document.querySelector("[data-user-cards-container]");
 const searchInput = document.querySelector("[data-search]");
 
 let users = [];
-
-/*
-for (let i = 0; i < localStorage.nombre; i++) {
-  let temp = JSON.parse(localStorage.getItem(i));
-  let tempArray = [];
-  tempArray.push(temp.titre);
-  tempArray.push(temp.destinataire);
-  tempArray.push(card);
-  users.push(tempArray);
-}
-*/
+/*Compare les `card` de la liste de courriel à l'input de la barre de recherche. Si `value` n'est pas inclu dans la `card` => la card ne sera pas visible*/
 searchInput.addEventListener("input", (e) => {
   const value = e.target.value.toLowerCase();
   users.forEach((user) => {
@@ -26,25 +16,10 @@ searchInput.addEventListener("input", (e) => {
 
 loadinit();
 
-/*Fonction qui va créer le code HTML pour chaque ''card''*/
-function addEmail() {
-  var buttonList = document.getElementById("button-list");
-  var newButton = document.createElement("li");
-  newButton.innerHTML = `<li>
-  <div class="email-card" id="${localStorage.nombre - 1}"onclick="addButton()">
-    <div class="email">s</div>
-    <div class="titre">d</div>
-    <div class="contact">s</div>
-    <div class="email-content"></div>
-  </div>
-</li>`;
-  buttonList.appendChild(newButton);
-}
-
 /* Fonction qui va créer la loop pour recréer la ''card'' de chaque courriel lorsqu'on charche la page */
 function loadinit() {
   const nombre = localStorage.nombre;
-  for (var i = 0; i < nombre; i++) {
+  for (var i = 0; i <= nombre; i++) {
     users.push(emailcreate(i));
   }
 }
