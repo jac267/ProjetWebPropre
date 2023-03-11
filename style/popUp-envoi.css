@@ -39,8 +39,9 @@
   margin: initial;
 
   margin-left: 3vh;
-  font-size: 2vh;
+  font-size: 3vh;
   color: antiquewhite;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
 
   resize: none;
 }

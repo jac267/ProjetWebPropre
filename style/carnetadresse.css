@@ -25,6 +25,7 @@
   background-color: rgb(48, 49, 54);
   font-size: 17px;
   color: antiquewhite;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
   border-style: solid;
   border-radius: 10px;
   border-color: #888;
@@ -56,6 +57,7 @@
 
 #carnet-adresse-list ul {
   position: relative;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
   color: antiquewhite;
   left: -3.5vh;
 
@@ -80,7 +82,7 @@
 }
 
 .selected {
-  border: solid 1px;
+  border: solid;
   border-radius: 5px;
   border-color: #888;
   background-color: rgb(48, 49, 54);

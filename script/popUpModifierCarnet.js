@@ -46,8 +46,23 @@ function sauvegarder() {
       '{"valeur":[' + JSON.stringify(dict_contact) + "]}"
     );
   } else {
-    carnetDAdresse.valeur[localStorageSize] = dict_contact;
-    localStorage.setItem("carnetDAdresse", JSON.stringify(carnetDAdresse));
+    let r = false;
+    /*Vérifier qu'il n'y a pas de contact dupliqué*/
+    for (let i = 0; i < localStorageSize; i++) {
+      if (
+        carnetDAdresse.valeur[i].Name == dict_contact.Name ||
+        carnetDAdresse.valeur[i].PublicKey == dict_contact.PublicKey
+      ) {
+        carnetDAdresse.valeur[i].Name = dict_contact.Name;
+        carnetDAdresse.valeur[i].PublicKey = dict_contact.PublicKey;
+        localStorage.setItem("carnetDAdresse", JSON.stringify(carnetDAdresse));
+        r = true;
+      }
+    }
+    if (r == false) {
+      carnetDAdresse.valeur[localStorageSize] = dict_contact;
+      localStorage.setItem("carnetDAdresse", JSON.stringify(carnetDAdresse));
+    }
   }
   refreshList();
   fermer();
