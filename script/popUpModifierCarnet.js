@@ -1,8 +1,10 @@
+/* Fonction qui s'occupe d'ouvrir le popUp */
 function open_new() {
   let popUp = document.getElementById("wraper-popup-modifier-carnet");
   popUp.style.display = "block";
 }
 
+/* Fonction qui assure la modification du contact qui est sélectionné*/
 function open_mod(index) {
   let carnetDAdresse = JSON.parse(localStorage.getItem("carnetDAdresse"))
     .valeur[index];
@@ -15,6 +17,7 @@ function open_mod(index) {
   popUp.style.display = "block";
 }
 
+/* fonction qui ferme le ''popUp'' de modification d'un contact */
 function fermer() {
   let popUp = document.getElementById("wraper-popup-modifier-carnet");
   popUp.style.display = "none";
@@ -23,7 +26,7 @@ function fermer() {
   document.getElementById("contact-public-key-field").value = "";
 }
 
-
+/* Fonction qui sauvegarde les contacts au localstorage*/
 function sauvegarder() {
   let localStorageSize = 0;
   let carnetDAdresse = JSON.parse(localStorage.getItem("carnetDAdresse"));

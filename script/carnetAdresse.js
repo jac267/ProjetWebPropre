@@ -57,7 +57,7 @@ function remove() {
       .replace(")", "")
   );
 
-  console.log(index);
+  
   let carnetDAdresse = JSON.parse(localStorage.getItem("carnetDAdresse"));
 
   carnetDAdresse.valeur.splice(index, 1);

@@ -6,7 +6,7 @@ function Spawn() {
 
 /* fonction qui va restaurer la page en retirant le popUp*/
 function Restore() {
-  let checkRespone = document.getElementById("envoi-message").textContent;
+   let checkRespone = document.getElementById("envoi-message").textContent;
   let s = "Message envoyé avec succès!";
   if (checkRespone.length == s.length) {
     location.hash = "liste-couriel";
