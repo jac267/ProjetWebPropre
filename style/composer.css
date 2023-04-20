@@ -90,3 +90,17 @@
   width: 25%;
   font-size: large;
 }
+.composer-content::after {
+  content: attr(data-charcount) "/50";
+  margin-top: 0.5vh;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
+  border-style: medium;
+  background-color: #7289da;
+  border-radius: 5px;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
+
+  position: relative;
+  align-content: right;
+  font-size: 3vh;
+  color: antiquewhite;
+}

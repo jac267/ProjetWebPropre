@@ -62,3 +62,21 @@ function loadnew() {
     element: card,
   };
 }
+
+// compte et affiche le nombre de char dans le textarea
+function loadCharCounts() {
+  let elements = Array.from(
+    document.getElementsByClassName("composer-content")
+  );
+  elements.forEach((item) => {
+    let textarea = item.querySelector("textarea");
+    textarea.addEventListener("keyup", function (e) {
+      item.dataset.charcount = this.value.length;
+    });
+    item.dataset.charcount = "0";
+  });
+}
+
+window.addEventListener("load", function () {
+  loadCharCounts();
+});
